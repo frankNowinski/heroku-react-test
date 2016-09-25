@@ -4,11 +4,10 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "nf start -p 3000",
-    "server": "API_PORT=8080 ./node_modules/.bin/babel-node ./src/index.js",
+    "start": "node src/index.js",
+    "install": "cd client && npm install && npm run build && cd ..",
     "db:migrate": "knex migrate:latest --knexfile ./src/knexfile.js",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "install": "cd client && npm run build && cd .."
   },
   "keywords": [],
   "author": "",
