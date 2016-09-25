@@ -8,7 +8,8 @@ import stocks from './routes/stocks';
 
 let app = express();
 
-app.set('port', (process.env.API_PORT || 8080));
+app.set('port', (process.env.PORT || 8080));
+app.use(express.static(path.join(__dirname, 'client/build')));
 
 app.use(bodyParser.json());
 app.use(express.static(path.join(__dirname, 'client/build')));
